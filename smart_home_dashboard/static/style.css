@@ -1,0 +1,535 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f6f7;
+    color: #17202a;
+}
+
+
+/* HEADER */
+
+.topbar {
+    background: #116b5d;
+    color: white;
+
+    padding: 22px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+.topbar h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+
+.topbar p {
+    margin: 7px 0 0;
+    opacity: 0.9;
+}
+
+
+.live-badge {
+    background: white;
+    color: #116b5d;
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+
+/* MAIN */
+
+.container {
+    width: min(1200px, 92%);
+
+    margin: 28px auto 50px;
+}
+
+
+
+/* HERO */
+
+.hero,
+.section-card {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    margin-bottom: 26px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+.hero {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 190px;
+}
+
+
+.small-title {
+
+    color: #137765;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.hero h2 {
+
+    font-size: 34px;
+
+    margin: 10px 0;
+}
+
+
+.hero p {
+
+    color: #667085;
+
+    font-size: 16px;
+}
+
+
+.hero-icon {
+
+    font-size: 95px;
+}
+
+
+
+/* SECTION HEADING */
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.section-heading.centered {
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+
+    margin: 7px 0 0;
+
+    font-size: 28px;
+}
+
+
+.device-count {
+
+    background: #e8f5f2;
+
+    color: #116b5d;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+
+/* DEVICE CARDS */
+
+.device-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.device-card {
+
+    border: 1px solid #dce5e3;
+
+    border-radius: 20px;
+
+    padding: 28px 20px;
+
+    text-align: center;
+
+    transition: 0.2s;
+}
+
+
+.device-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 24px
+        rgba(0, 0, 0, 0.07);
+}
+
+
+.device-icon {
+
+    font-size: 55px;
+}
+
+
+.device-card h3 {
+
+    font-size: 27px;
+
+    margin: 10px 0;
+}
+
+
+.status {
+
+    font-size: 17px;
+
+    margin-bottom: 22px;
+}
+
+
+.status .on {
+
+    color: #0b9b39;
+}
+
+
+.status .off {
+
+    color: #777;
+}
+
+
+
+/* BUTTONS */
+
+.button-row {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.control-btn,
+.add-btn,
+.delete-btn {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    border-radius: 10px;
+
+    padding: 12px 25px;
+}
+
+
+.on-btn,
+.off-btn {
+
+    background: #147665;
+
+    color: white;
+}
+
+
+.on-btn:hover,
+.off-btn:hover,
+.add-btn:hover {
+
+    background: #0e5e52;
+}
+
+
+
+/* FORM */
+
+.schedule-form {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    gap: 18px;
+
+    align-items: end;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.form-group select,
+.form-group input {
+
+    width: 100%;
+
+    height: 54px;
+
+    padding: 0 15px;
+
+    border: 1px solid #ccd5d3;
+
+    border-radius: 10px;
+
+    background: white;
+
+    font-size: 16px;
+}
+
+
+.add-btn {
+
+    grid-column: 1 / -1;
+
+    background: #147665;
+
+    color: white;
+
+    width: 100%;
+
+    height: 52px;
+}
+
+
+.message {
+
+    text-align: center;
+
+    min-height: 20px;
+
+    font-weight: bold;
+
+    margin: 15px 0 0;
+}
+
+
+
+/* TASKS */
+
+.task-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border: 1px solid #dce5e3;
+
+    border-radius: 14px;
+
+    margin-bottom: 12px;
+}
+
+
+.task-row strong,
+.task-row span {
+
+    display: block;
+}
+
+
+.task-row span {
+
+    margin-top: 5px;
+
+    color: #667085;
+}
+
+
+.task-action {
+
+    font-weight: bold;
+}
+
+
+.task-status {
+
+    color: #0b9b39;
+
+    font-weight: bold;
+}
+
+
+.delete-btn {
+
+    background: #ffe9e9;
+
+    color: #c62828;
+
+    padding: 9px 14px;
+}
+
+
+.empty-state {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #667085;
+
+    border: 1px dashed #ccd5d3;
+
+    border-radius: 14px;
+}
+
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    color: #667085;
+
+    padding:
+        10px 20px 35px;
+}
+
+
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+    .device-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .schedule-form {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .add-btn {
+
+        grid-column: auto;
+    }
+
+
+    .task-row {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero {
+
+        text-align: center;
+
+        flex-direction: column;
+    }
+
+
+    .hero h2 {
+
+        font-size: 28px;
+    }
+
+}
+
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .topbar {
+
+        padding: 18px 5%;
+    }
+
+
+    .topbar h1 {
+
+        font-size: 24px;
+    }
+
+
+    .container {
+
+        width: 94%;
+    }
+
+
+    .hero,
+    .section-card {
+
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+}
